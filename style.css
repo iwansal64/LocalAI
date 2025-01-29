@@ -1,0 +1,86 @@
+* {
+    margin:0;
+    padding:0;
+    font-family:calibri;
+    font-weight: lighter;
+
+    color: #eee;
+}
+
+body {
+    background-image: linear-gradient(to bottom left, #000, #111);
+    height: 100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction: column;
+}
+
+div.message-container {
+    width: clamp(300px, 40vw, 600px);
+    height: clamp(300px, 80vh, 600px);
+    padding: 20px;
+    border-radius: 15px;
+
+    background-color: #555555;
+    display: grid;
+    grid-template-rows: 1fr auto;
+    gap: 5px;
+}
+
+div.chat-container {
+    padding: 15px;
+    background-color: #121212;
+    overflow-y: auto;
+    border-radius: 10px;
+    display: grid;
+    grid-auto-rows: max-content;
+    gap: 20px;
+}
+
+div.message {
+    background-color: #424242;
+    padding: 15px;
+    width: fit-content;
+    height: max-content;
+    border-radius: 10px;
+}
+
+div.message.user {
+    justify-self: end;
+}
+
+div.message > p.name {
+    font-weight: 700;
+}
+
+div.message > p.content {
+    margin-top: 5px;
+}
+
+div.input-field {
+    padding: 5px;
+    background-color: #424242;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+}
+
+div.input-field > input {
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-size: 1.2rem;
+    padding: 5px;
+}
+
+div.input-field > button {
+    width: fit-content;
+    height: 100%;
+    background-color: #eeeeee;
+    color: black;
+    padding: 5px 15px;
+    border: none;
+}
