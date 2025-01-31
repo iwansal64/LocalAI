@@ -54,7 +54,7 @@ div.chat-container {
 @media (max-width: 512px) {
     div.message-container {
         width: 100vw;
-        height: 80vh;
+        height: 60vh;
         border-radius: 0;
         padding: 10px;
         box-sizing: border-box;
@@ -98,6 +98,16 @@ div.input-field {
     display: flex;
     align-items: center;
     border-radius: 10px;
+}
+
+@media (max-width: 512px) {
+    div.input-field {
+        position: absolute;
+        left: 50%;
+        bottom: 10px;
+        transform: translateX(-50%);
+        width: 90vw;
+    }
 }
 
 div.input-field > input {
