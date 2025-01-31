@@ -15,6 +15,7 @@ body {
     justify-content:center;
     align-items:center;
     flex-direction: column;
+    overflow: hidden;
 }
 
 h1.title {
@@ -24,12 +25,13 @@ h1.title {
 
 p.desc {
     font-size: 1.2rem;
+    text-align: center;
 }
 
 div.message-container {
     margin-top: 60px;
-    width: clamp(300px, 40vw, 600px);
-    height: clamp(300px, 80vh, 600px);
+    width: clamp(400px, 70vw, 900px);
+    height: clamp(300px, 70vh, 700px);
     padding: 20px;
     border-radius: 15px;
 
@@ -49,10 +51,27 @@ div.chat-container {
     gap: 20px;
 }
 
+@media (max-width: 400px) {
+    div.message-container {
+        width: 100vw;
+        height: 80vh;
+        border-radius: 0;
+        padding: 10px;
+        box-sizing: border-box;
+        background-color: transparent;
+    }
+    
+    div.chat-container {
+        background-color: transparent;
+    }
+}
+
+
 div.message {
     background-color: #424242;
     padding: 15px;
     width: fit-content;
+    max-width: 70%;
     height: max-content;
     border-radius: 10px;
 }
@@ -93,8 +112,12 @@ div.input-field > input {
 div.input-field > button {
     width: fit-content;
     height: 100%;
-    background-color: #eeeeee;
-    color: black;
+    background-color: #222;
+    color: #eee;
+    font-weight: 700;
+    font-size: 1.25rem;
     padding: 5px 15px;
     border: none;
+    border-radius: 10px;
+    cursor: pointer;
 }
