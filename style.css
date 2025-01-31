@@ -51,7 +51,7 @@ div.chat-container {
     gap: 20px;
 }
 
-@media (max-width: 400px) {
+@media (max-width: 512px) {
     div.message-container {
         width: 100vw;
         height: 80vh;
