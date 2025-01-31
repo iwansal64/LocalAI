@@ -1,3 +1,4 @@
+const api_base_url = "http://"+window.location.href.substring(7).split("/")[0].split(":")[0]+":11434";
 const ai_model = "tinyllama:latest";
 
 const send_button = document.getElementById("send");
@@ -28,7 +29,7 @@ async function send_message() {
 
     add_chat(message, true);
 
-    const result = await (await fetch("http://localhost:11434/api/generate",
+    const result = await (await fetch(api_base_url+"/api/generate",
         {
             method: "POST",
             body: JSON.stringify({
