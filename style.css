@@ -18,6 +18,12 @@ body {
     overflow: hidden;
 }
 
+div.title-container {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
 h1.title {
     font-size: 4rem;
     font-weight: 700;
@@ -98,16 +104,6 @@ div.input-field {
     display: flex;
     align-items: center;
     border-radius: 10px;
-}
-
-@media (max-width: 512px) {
-    div.input-field {
-        position: absolute;
-        left: 50%;
-        bottom: 10px;
-        transform: translateX(-50%);
-        width: 90vw;
-    }
 }
 
 div.input-field > input {
